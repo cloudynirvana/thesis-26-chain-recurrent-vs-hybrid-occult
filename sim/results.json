@@ -1,0 +1,1578 @@
+{
+  "run_label": 20260921,
+  "deterministic": true,
+  "constants": {
+    "a": 1.0,
+    "b": 0.5,
+    "c": 0.65,
+    "d": 0.2
+  },
+  "closed_form": {
+    "T_star": 0.22222222222222224,
+    "E_star": 0.5617283950617284,
+    "y_det": 0.15
+  },
+  "window": {
+    "T": [
+      0.03,
+      0.58
+    ],
+    "E": [
+      0.25,
+      0.92
+    ]
+  },
+  "collocation": {
+    "kernel": "Wendland psi_4,2",
+    "delta2": 1e-08,
+    "support_multiplier": 9.0,
+    "stencil_each_way": 4,
+    "stencil_step_in_spacings": 0.4,
+    "gamma_menu": [
+      -0.55,
+      -0.4,
+      -0.25
+    ],
+    "selection_rule": "Among cuts covering at least 95 percent of the orbit within two spacings, keep the smallest peak-to-peak V. If none qualify, keep the smallest peak-to-peak anyway.",
+    "classification": {
+      "interior": "nearest defect component within 1 spacing and every other component beyond 2 spacings",
+      "interface": "two components of different kind both within 1.5 spacings",
+      "transient": "every failing node beyond 2 spacings",
+      "margin": "otherwise"
+    }
+  },
+  "equilibria": {
+    "origin": {
+      "state": [
+        0.0,
+        0.0
+      ],
+      "field_norm": 0.0,
+      "trace": 0.8,
+      "det": -0.2,
+      "eigenvalues_real": [
+        1.0,
+        -0.2
+      ],
+      "eigenvalues_imag": [
+        0.0,
+        0.0
+      ]
+    },
+    "carrying": {
+      "state": [
+        1.0,
+        0.0
+      ],
+      "field_norm": 0.0,
+      "trace": -0.7666666666666666,
+      "det": -0.23333333333333334,
+      "eigenvalues_real": [
+        -1.0,
+        0.23333333333333334
+      ],
+      "eigenvalues_imag": [
+        0.0,
+        0.0
+      ]
+    },
+    "coexistence": {
+      "state": [
+        0.22222222222222224,
+        0.5617283950617284
+      ],
+      "field_norm": 0.0,
+      "trace": 0.017094017094017033,
+      "det": 0.1076923076923077,
+      "eigenvalues_real": [
+        0.00854700854700852,
+        0.00854700854700852
+      ],
+      "eigenvalues_imag": [
+        0.32805374001404874,
+        -0.32805374001404874
+      ]
+    }
+  },
+  "orbit": {
+    "period": 19.87554172685853,
+    "n_samples": 1491,
+    "T_min": 0.099590636749635,
+    "T_max": 0.41808661058391877,
+    "E_min": 0.39629040530292337,
+    "E_max": 0.7280828472301688,
+    "period_samples_std": 0.0066674074897008495,
+    "section": "upward crossings of T = T*"
+  },
+  "attractiveness": {
+    "trials": [
+      {
+        "name": "inside_offset",
+        "start": [
+          0.26222222222222225,
+          0.5317283950617284
+        ],
+        "dist_start": 0.12829566183507543,
+        "dist_end": 0.0368941656418541,
+        "decreased": true
+      },
+      {
+        "name": "outside_corner",
+        "start": [
+          0.55,
+          0.8
+        ],
+        "dist_start": 0.23666983054931515,
+        "dist_end": 0.008114918072343966,
+        "decreased": true
+      }
+    ]
+  },
+  "pause_fields_in_window": {
+    "Q": {
+      "min_speed_on_mesh": 0.05196392209026571,
+      "argmin_state": [
+        0.03,
+        0.25
+      ],
+      "positive_equilibrium_expected": false
+    },
+    "A": {
+      "min_speed_on_mesh": 0.05,
+      "argmin_state": [
+        0.03,
+        0.25
+      ],
+      "positive_equilibrium_expected": false
+    },
+    "I": {
+      "min_speed_on_mesh": 0.0419232052678587,
+      "argmin_state": [
+        0.05088607594936709,
+        0.25
+      ],
+      "positive_equilibrium_expected": false
+    }
+  },
+  "grids": {
+    "22": [
+      {
+        "n": 22,
+        "n_points": 484,
+        "spacing": 0.03190476190476188,
+        "shape": 3.4825870646766197,
+        "support_radius": 0.2871428571428569,
+        "matrix_symmetry_max": 5.551115123125783e-17,
+        "condition_number": 5165.987602301402,
+        "min_eigenvalue": 0.0014698203850103523,
+        "gamma": -0.55,
+        "fail_count": 160,
+        "fail_fraction": 0.3305785123966942,
+        "orbit_cover_within_2_spacing": 1.0,
+        "node_residual_inf": 1.6697754290362354e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.019619391585101065,
+          "V_net": 0.0018845528722508664,
+          "V_mean": -1.289635563766284,
+          "orbital_median": 0.0005808702639455987,
+          "orbital_p10": -0.09044344192702702,
+          "orbital_p90": 0.10555559855207708,
+          "orbital_max": 0.19489464831754333,
+          "fraction_positive": 0.5
+        },
+        "components": [
+          {
+            "id": 1,
+            "size": 144,
+            "kind": "orbit",
+            "median_dist_orbit": 0.03051228094236102,
+            "median_dist_focus": 0.17054649698956265,
+            "centroid": [
+              0.25953042328042325,
+              0.560406746031746
+            ]
+          },
+          {
+            "id": 4,
+            "size": 8,
+            "kind": "orbit",
+            "median_dist_orbit": 0.2277617003616093,
+            "median_dist_focus": 0.40202110440465944,
+            "centroid": [
+              0.58,
+              0.7445238095238096
+            ]
+          },
+          {
+            "id": 5,
+            "size": 6,
+            "kind": "orbit",
+            "median_dist_orbit": 0.2182620113552031,
+            "median_dist_focus": 0.38023089049843384,
+            "centroid": [
+              0.09547619047619048,
+              0.92
+            ]
+          },
+          {
+            "id": 2,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.18961113547095795,
+            "median_dist_focus": 0.38880737406892707,
+            "centroid": [
+              0.58,
+              0.4095238095238095
+            ]
+          },
+          {
+            "id": 3,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.16345718265139847,
+            "median_dist_focus": 0.3622100112445388,
+            "centroid": [
+              0.58,
+              0.5052380952380953
+            ]
+          }
+        ],
+        "selected": true
+      },
+      {
+        "n": 22,
+        "n_points": 484,
+        "spacing": 0.03190476190476188,
+        "shape": 3.4825870646766197,
+        "support_radius": 0.2871428571428569,
+        "matrix_symmetry_max": 5.551115123125783e-17,
+        "condition_number": 5165.987602301402,
+        "min_eigenvalue": 0.0014698203850103523,
+        "gamma": -0.4,
+        "fail_count": 115,
+        "fail_fraction": 0.23760330578512398,
+        "orbit_cover_within_2_spacing": 1.0,
+        "node_residual_inf": 1.9184653865522705e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.101868186960963,
+          "V_net": 0.004433569874545462,
+          "V_mean": -1.548408964389328,
+          "orbital_median": 0.10132166223780104,
+          "orbital_p10": -0.5834190713797973,
+          "orbital_p90": 0.31946499814870855,
+          "orbital_max": 0.7734222089653571,
+          "fraction_positive": 0.7228915662650602
+        },
+        "components": [
+          {
+            "id": 2,
+            "size": 55,
+            "kind": "orbit",
+            "median_dist_orbit": 0.02387686628071764,
+            "median_dist_focus": 0.17616842189305976,
+            "centroid": [
+              0.3676190476190476,
+              0.5765887445887445
+            ]
+          },
+          {
+            "id": 1,
+            "size": 49,
+            "kind": "orbit",
+            "median_dist_orbit": 0.025164504435539477,
+            "median_dist_focus": 0.14873249374776246,
+            "centroid": [
+              0.12246841593780367,
+              0.5566763848396501
+            ]
+          },
+          {
+            "id": 3,
+            "size": 7,
+            "kind": "orbit",
+            "median_dist_orbit": 0.21909246194956447,
+            "median_dist_focus": 0.3947676989095282,
+            "centroid": [
+              0.58,
+              0.7285714285714288
+            ]
+          },
+          {
+            "id": 4,
+            "size": 4,
+            "kind": "orbit",
+            "median_dist_orbit": 0.22958357182201933,
+            "median_dist_focus": 0.38973477792899147,
+            "centroid": [
+              0.06928571428571428,
+              0.92
+            ]
+          }
+        ],
+        "selected": false
+      },
+      {
+        "n": 22,
+        "n_points": 484,
+        "spacing": 0.03190476190476188,
+        "shape": 3.4825870646766197,
+        "support_radius": 0.2871428571428569,
+        "matrix_symmetry_max": 5.551115123125783e-17,
+        "condition_number": 5165.987602301402,
+        "min_eigenvalue": 0.0014698203850103523,
+        "gamma": -0.25,
+        "fail_count": 84,
+        "fail_fraction": 0.17355371900826447,
+        "orbit_cover_within_2_spacing": 0.8753351206434317,
+        "node_residual_inf": 2.2737367544323206e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.22884996407372515,
+          "V_net": 0.003471703180519592,
+          "V_mean": -1.6054421620813728,
+          "orbital_median": 0.17938930043127854,
+          "orbital_p10": -0.9103496993065685,
+          "orbital_p90": 0.6875410228477419,
+          "orbital_max": 1.3714846128092262,
+          "fraction_positive": 0.6506024096385542
+        },
+        "components": [
+          {
+            "id": 1,
+            "size": 44,
+            "kind": "orbit",
+            "median_dist_orbit": 0.023973271797156706,
+            "median_dist_focus": 0.14846471277055084,
+            "centroid": [
+              0.1163095238095238,
+              0.5552705627705626
+            ]
+          },
+          {
+            "id": 2,
+            "size": 31,
+            "kind": "orbit",
+            "median_dist_orbit": 0.020204306634300045,
+            "median_dist_focus": 0.1787998469425546,
+            "centroid": [
+              0.3687864823348693,
+              0.6194777265745007
+            ]
+          },
+          {
+            "id": 3,
+            "size": 6,
+            "kind": "orbit",
+            "median_dist_orbit": 0.2277617003616093,
+            "median_dist_focus": 0.40202110440465944,
+            "centroid": [
+              0.58,
+              0.7445238095238095
+            ]
+          },
+          {
+            "id": 4,
+            "size": 3,
+            "kind": "orbit",
+            "median_dist_orbit": 0.23568363813349086,
+            "median_dist_focus": 0.3948735032835138,
+            "centroid": [
+              0.05619047619047618,
+              0.92
+            ]
+          }
+        ],
+        "selected": false
+      }
+    ],
+    "34": [
+      {
+        "n": 34,
+        "n_points": 1156,
+        "spacing": 0.020303030303030323,
+        "shape": 5.472636815920393,
+        "support_radius": 0.1827272727272729,
+        "matrix_symmetry_max": 2.220446049250313e-16,
+        "condition_number": 5962.634234394554,
+        "min_eigenvalue": 0.0035757837491637227,
+        "gamma": -0.55,
+        "fail_count": 339,
+        "fail_fraction": 0.29325259515570934,
+        "orbit_cover_within_2_spacing": 1.0,
+        "node_residual_inf": 2.5579538487363607e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.024342669769189307,
+          "V_net": -0.000554366131010342,
+          "V_mean": -1.0997367953099906,
+          "orbital_median": -0.000961185692252009,
+          "orbital_p10": -0.09280137608895256,
+          "orbital_p90": 0.10567559912022872,
+          "orbital_max": 0.236421162579731,
+          "fraction_positive": 0.4759036144578313
+        },
+        "components": [
+          {
+            "id": 2,
+            "size": 301,
+            "kind": "orbit",
+            "median_dist_orbit": 0.02595865030599817,
+            "median_dist_focus": 0.16973777337690366,
+            "centroid": [
+              0.25192691029900327,
+              0.556906272022551
+            ]
+          },
+          {
+            "id": 6,
+            "size": 13,
+            "kind": "orbit",
+            "median_dist_orbit": 0.213190948585147,
+            "median_dist_focus": 0.39000615391258375,
+            "centroid": [
+              0.58,
+              0.7169696969696969
+            ]
+          },
+          {
+            "id": 3,
+            "size": 9,
+            "kind": "orbit",
+            "median_dist_orbit": 0.16871096354967927,
+            "median_dist_focus": 0.36853578552098804,
+            "centroid": [
+              0.5762962962962963,
+              0.46882154882154886
+            ]
+          },
+          {
+            "id": 4,
+            "size": 7,
+            "kind": "focus",
+            "median_dist_orbit": 0.11319043351522787,
+            "median_dist_focus": 0.015847684426803982,
+            "centroid": [
+              0.21809523809523806,
+              0.5632467532467533
+            ]
+          },
+          {
+            "id": 7,
+            "size": 6,
+            "kind": "orbit",
+            "median_dist_orbit": 0.22835893541253355,
+            "median_dist_focus": 0.38869595317922634,
+            "centroid": [
+              0.07166666666666666,
+              0.92
+            ]
+          },
+          {
+            "id": 1,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.2563569579866606,
+            "median_dist_focus": 0.4489011678669325,
+            "centroid": [
+              0.58,
+              0.2906060606060606
+            ]
+          },
+          {
+            "id": 5,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.12942423971865405,
+            "median_dist_focus": 0.3245239469828452,
+            "centroid": [
+              0.5466666666666666,
+              0.5545454545454546
+            ]
+          },
+          {
+            "id": 8,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.197663714412801,
+            "median_dist_focus": 0.3630791155376647,
+            "centroid": [
+              0.1633333333333333,
+              0.92
+            ]
+          }
+        ],
+        "selected": true
+      },
+      {
+        "n": 34,
+        "n_points": 1156,
+        "spacing": 0.020303030303030323,
+        "shape": 5.472636815920393,
+        "support_radius": 0.1827272727272729,
+        "matrix_symmetry_max": 2.220446049250313e-16,
+        "condition_number": 5962.634234394554,
+        "min_eigenvalue": 0.0035757837491637227,
+        "gamma": -0.4,
+        "fail_count": 237,
+        "fail_fraction": 0.2050173010380623,
+        "orbit_cover_within_2_spacing": 0.9638069705093834,
+        "node_residual_inf": 3.126388037344441e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.09771373553611484,
+          "V_net": 0.003507527472866867,
+          "V_mean": -1.3432922725666916,
+          "orbital_median": 0.08273653208586307,
+          "orbital_p10": -0.8439280682675365,
+          "orbital_p90": 0.31851930745301527,
+          "orbital_max": 0.6537619224087621,
+          "fraction_positive": 0.7891566265060241
+        },
+        "components": [
+          {
+            "id": 2,
+            "size": 106,
+            "kind": "orbit",
+            "median_dist_orbit": 0.01888769087106213,
+            "median_dist_focus": 0.17868226479954402,
+            "centroid": [
+              0.3691509433962264,
+              0.5752315608919383
+            ]
+          },
+          {
+            "id": 1,
+            "size": 105,
+            "kind": "orbit",
+            "median_dist_orbit": 0.021256838355795084,
+            "median_dist_focus": 0.14949893490877403,
+            "centroid": [
+              0.12126984126984126,
+              0.5616998556998557
+            ]
+          },
+          {
+            "id": 5,
+            "size": 12,
+            "kind": "orbit",
+            "median_dist_orbit": 0.20831283421578956,
+            "median_dist_focus": 0.3861922995966731,
+            "centroid": [
+              0.58,
+              0.7068181818181819
+            ]
+          },
+          {
+            "id": 6,
+            "size": 6,
+            "kind": "orbit",
+            "median_dist_orbit": 0.22835893541253355,
+            "median_dist_focus": 0.38869595317922634,
+            "centroid": [
+              0.07166666666666666,
+              0.92
+            ]
+          },
+          {
+            "id": 3,
+            "size": 5,
+            "kind": "orbit",
+            "median_dist_orbit": 0.17393140308429622,
+            "median_dist_focus": 0.3739254116570271,
+            "centroid": [
+              0.58,
+              0.4530303030303031
+            ]
+          },
+          {
+            "id": 4,
+            "size": 3,
+            "kind": "focus",
+            "median_dist_orbit": 0.11319043351522787,
+            "median_dist_focus": 0.015252232071832796,
+            "centroid": [
+              0.21888888888888883,
+              0.5680808080808081
+            ]
+          }
+        ],
+        "selected": false
+      },
+      {
+        "n": 34,
+        "n_points": 1156,
+        "spacing": 0.020303030303030323,
+        "shape": 5.472636815920393,
+        "support_radius": 0.1827272727272729,
+        "matrix_symmetry_max": 2.220446049250313e-16,
+        "condition_number": 5962.634234394554,
+        "min_eigenvalue": 0.0035757837491637227,
+        "gamma": -0.25,
+        "fail_count": 168,
+        "fail_fraction": 0.1453287197231834,
+        "orbit_cover_within_2_spacing": 0.8270777479892761,
+        "node_residual_inf": 5.409006575973763e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.21324426830428678,
+          "V_net": 0.0029429289302631556,
+          "V_mean": -1.4452250128921738,
+          "orbital_median": 0.1825329169946599,
+          "orbital_p10": -0.8777627525512843,
+          "orbital_p90": 0.7162848667893016,
+          "orbital_max": 1.3739656442024,
+          "fraction_positive": 0.6626506024096386
+        },
+        "components": [
+          {
+            "id": 1,
+            "size": 88,
+            "kind": "orbit",
+            "median_dist_orbit": 0.02012789704600315,
+            "median_dist_focus": 0.1471774608819143,
+            "centroid": [
+              0.11522727272727269,
+              0.5672348484848485
+            ]
+          },
+          {
+            "id": 4,
+            "size": 60,
+            "kind": "orbit",
+            "median_dist_orbit": 0.016760351210150584,
+            "median_dist_focus": 0.17710701679830473,
+            "centroid": [
+              0.3791666666666666,
+              0.6046262626262628
+            ]
+          },
+          {
+            "id": 5,
+            "size": 11,
+            "kind": "orbit",
+            "median_dist_orbit": 0.20343471984643208,
+            "median_dist_focus": 0.3823784452807624,
+            "centroid": [
+              0.58,
+              0.6966666666666668
+            ]
+          },
+          {
+            "id": 6,
+            "size": 5,
+            "kind": "orbit",
+            "median_dist_orbit": 0.23219251997716583,
+            "median_dist_focus": 0.3919237450287883,
+            "centroid": [
+              0.06333333333333332,
+              0.9200000000000002
+            ]
+          },
+          {
+            "id": 2,
+            "size": 2,
+            "kind": "orbit",
+            "median_dist_orbit": 0.18445728245195236,
+            "median_dist_focus": 0.38400249425980115,
+            "centroid": [
+              0.58,
+              0.4225757575757576
+            ]
+          },
+          {
+            "id": 3,
+            "size": 2,
+            "kind": "orbit",
+            "median_dist_orbit": 0.16682557376969556,
+            "median_dist_focus": 0.366367771271737,
+            "centroid": [
+              0.58,
+              0.4834848484848485
+            ]
+          }
+        ],
+        "selected": false
+      }
+    ],
+    "42": [
+      {
+        "n": 42,
+        "n_points": 1764,
+        "spacing": 0.01634146341463416,
+        "shape": 6.799336650082913,
+        "support_radius": 0.14707317073170745,
+        "matrix_symmetry_max": 2.220446049250313e-16,
+        "condition_number": 6411.079499674687,
+        "min_eigenvalue": 0.005342873701443464,
+        "gamma": -0.55,
+        "fail_count": 549,
+        "fail_fraction": 0.3112244897959184,
+        "orbit_cover_within_2_spacing": 1.0,
+        "node_residual_inf": 3.410605131648481e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.02627779281614606,
+          "V_net": -0.0007806881578301672,
+          "V_mean": -0.8462776341772437,
+          "orbital_median": 0.014000577499005296,
+          "orbital_p10": -0.08139851083832195,
+          "orbital_p90": 0.10115241977054712,
+          "orbital_max": 0.18053049041236058,
+          "fraction_positive": 0.608433734939759
+        },
+        "components": [
+          {
+            "id": 2,
+            "size": 491,
+            "kind": "orbit",
+            "median_dist_orbit": 0.026131542732811062,
+            "median_dist_focus": 0.16835512983949508,
+            "centroid": [
+              0.24619144602851323,
+              0.5539312503104665
+            ]
+          },
+          {
+            "id": 6,
+            "size": 16,
+            "kind": "orbit",
+            "median_dist_orbit": 0.2047630629813017,
+            "median_dist_focus": 0.38342388809789696,
+            "centroid": [
+              0.58,
+              0.6993902439024391
+            ]
+          },
+          {
+            "id": 3,
+            "size": 13,
+            "kind": "orbit",
+            "median_dist_orbit": 0.16755539369362515,
+            "median_dist_focus": 0.3672673325928893,
+            "centroid": [
+              0.5727767354596622,
+              0.47249530956848024
+            ]
+          },
+          {
+            "id": 12,
+            "size": 7,
+            "kind": "orbit",
+            "median_dist_orbit": 0.22893295981040332,
+            "median_dist_focus": 0.3891734222543581,
+            "centroid": [
+              0.07024390243902438,
+              0.92
+            ]
+          },
+          {
+            "id": 5,
+            "size": 6,
+            "kind": "orbit",
+            "median_dist_orbit": 0.11394917813432398,
+            "median_dist_focus": 0.30511711349951126,
+            "centroid": [
+              0.5263414634146341,
+              0.5850000000000001
+            ]
+          },
+          {
+            "id": 1,
+            "size": 5,
+            "kind": "orbit",
+            "median_dist_orbit": 0.25077148009606537,
+            "median_dist_focus": 0.44386747168375523,
+            "centroid": [
+              0.58,
+              0.2990243902439025
+            ]
+          },
+          {
+            "id": 4,
+            "size": 5,
+            "kind": "focus",
+            "median_dist_orbit": 0.11816494539229251,
+            "median_dist_focus": 0.01573369956126021,
+            "centroid": [
+              0.22317073170731705,
+              0.5637560975609757
+            ]
+          },
+          {
+            "id": 7,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.10046652926141315,
+            "median_dist_focus": 0.28460811388021284,
+            "centroid": [
+              0.4995121951219511,
+              0.6258536585365854
+            ]
+          },
+          {
+            "id": 8,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.09503254836239394,
+            "median_dist_focus": 0.2758715072973702,
+            "centroid": [
+              0.48609756097560974,
+              0.6421951219512195
+            ]
+          },
+          {
+            "id": 9,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.09104327104829002,
+            "median_dist_focus": 0.2685188825059007,
+            "centroid": [
+              0.47268292682926827,
+              0.6585365853658537
+            ]
+          },
+          {
+            "id": 10,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.07745293340472452,
+            "median_dist_focus": 0.2506269407799173,
+            "centroid": [
+              0.4458536585365853,
+              0.6748780487804878
+            ]
+          },
+          {
+            "id": 11,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.07671401623800385,
+            "median_dist_focus": 0.24689887267908567,
+            "centroid": [
+              0.43243902439024384,
+              0.6912195121951219
+            ]
+          },
+          {
+            "id": 13,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.19522377950334777,
+            "median_dist_focus": 0.3610445538351527,
+            "centroid": [
+              0.17756097560975606,
+              0.92
+            ]
+          }
+        ],
+        "selected": true
+      },
+      {
+        "n": 42,
+        "n_points": 1764,
+        "spacing": 0.01634146341463416,
+        "shape": 6.799336650082913,
+        "support_radius": 0.14707317073170745,
+        "matrix_symmetry_max": 2.220446049250313e-16,
+        "condition_number": 6411.079499674687,
+        "min_eigenvalue": 0.005342873701443464,
+        "gamma": -0.4,
+        "fail_count": 372,
+        "fail_fraction": 0.2108843537414966,
+        "orbit_cover_within_2_spacing": 0.9450402144772118,
+        "node_residual_inf": 6.359357485052897e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.1027809142485423,
+          "V_net": 0.0033362943740447015,
+          "V_mean": -1.0899632111627888,
+          "orbital_median": 0.09687700998029669,
+          "orbital_p10": -0.892213917989324,
+          "orbital_p90": 0.3156734638285117,
+          "orbital_max": 0.6295683534984562,
+          "fraction_positive": 0.8132530120481928
+        },
+        "components": [
+          {
+            "id": 2,
+            "size": 176,
+            "kind": "orbit",
+            "median_dist_orbit": 0.023826783252861423,
+            "median_dist_focus": 0.1501169880099254,
+            "centroid": [
+              0.1197103658536585,
+              0.5603021064301553
+            ]
+          },
+          {
+            "id": 3,
+            "size": 164,
+            "kind": "orbit",
+            "median_dist_orbit": 0.01916768610801641,
+            "median_dist_focus": 0.18187094515198418,
+            "centroid": [
+              0.37379089827483636,
+              0.5772278405710888
+            ]
+          },
+          {
+            "id": 7,
+            "size": 15,
+            "kind": "orbit",
+            "median_dist_orbit": 0.2009507539902725,
+            "median_dist_focus": 0.38049032535408717,
+            "centroid": [
+              0.58,
+              0.6912195121951219
+            ]
+          },
+          {
+            "id": 8,
+            "size": 7,
+            "kind": "orbit",
+            "median_dist_orbit": 0.22893295981040332,
+            "median_dist_focus": 0.3891734222543581,
+            "centroid": [
+              0.07024390243902438,
+              0.92
+            ]
+          },
+          {
+            "id": 4,
+            "size": 6,
+            "kind": "orbit",
+            "median_dist_orbit": 0.17368371985268605,
+            "median_dist_focus": 0.37364936884688227,
+            "centroid": [
+              0.58,
+              0.45426829268292684
+            ]
+          },
+          {
+            "id": 1,
+            "size": 2,
+            "kind": "orbit",
+            "median_dist_orbit": 0.24550184709381292,
+            "median_dist_focus": 0.43913147988992496,
+            "centroid": [
+              0.58,
+              0.3071951219512195
+            ]
+          },
+          {
+            "id": 5,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.1495005886985021,
+            "median_dist_focus": 0.3480122741357127,
+            "centroid": [
+              0.5665853658536585,
+              0.5114634146341464
+            ]
+          },
+          {
+            "id": 6,
+            "size": 1,
+            "kind": "orbit",
+            "median_dist_orbit": 0.1352806764185582,
+            "median_dist_focus": 0.33141521470677815,
+            "centroid": [
+              0.553170731707317,
+              0.5441463414634147
+            ]
+          }
+        ],
+        "selected": false
+      },
+      {
+        "n": 42,
+        "n_points": 1764,
+        "spacing": 0.01634146341463416,
+        "shape": 6.799336650082913,
+        "support_radius": 0.14707317073170745,
+        "matrix_symmetry_max": 2.220446049250313e-16,
+        "condition_number": 6411.079499674687,
+        "min_eigenvalue": 0.005342873701443464,
+        "gamma": -0.25,
+        "fail_count": 253,
+        "fail_fraction": 0.14342403628117914,
+        "orbit_cover_within_2_spacing": 0.7935656836461126,
+        "node_residual_inf": 7.958078640513122e-13,
+        "flatness": {
+          "V_peak_to_peak": 0.20859865699185165,
+          "V_net": 0.003020634296374336,
+          "V_mean": -1.2615818007486608,
+          "orbital_median": 0.18960498672582915,
+          "orbital_p10": -0.8499648965418859,
+          "orbital_p90": 0.6762374777461027,
+          "orbital_max": 1.2733791745716196,
+          "fraction_positive": 0.6626506024096386
+        },
+        "components": [
+          {
+            "id": 1,
+            "size": 135,
+            "kind": "orbit",
+            "median_dist_orbit": 0.019443153576065735,
+            "median_dist_focus": 0.14947561388929428,
+            "centroid": [
+              0.1146612466124661,
+              0.5647244805781392
+            ]
+          },
+          {
+            "id": 3,
+            "size": 90,
+            "kind": "orbit",
+            "median_dist_orbit": 0.016142390916015208,
+            "median_dist_focus": 0.18206518343695663,
+            "centroid": [
+              0.38205962059620585,
+              0.6046097560975611
+            ]
+          },
+          {
+            "id": 4,
+            "size": 15,
+            "kind": "orbit",
+            "median_dist_orbit": 0.2009507539902725,
+            "median_dist_focus": 0.38049032535408717,
+            "centroid": [
+              0.58,
+              0.6912195121951219
+            ]
+          },
+          {
+            "id": 5,
+            "size": 7,
+            "kind": "orbit",
+            "median_dist_orbit": 0.22893295981040332,
+            "median_dist_focus": 0.3891734222543581,
+            "centroid": [
+              0.07024390243902438,
+              0.92
+            ]
+          },
+          {
+            "id": 2,
+            "size": 6,
+            "kind": "orbit",
+            "median_dist_orbit": 0.17368371985268605,
+            "median_dist_focus": 0.37364936884688227,
+            "centroid": [
+              0.58,
+              0.45426829268292684
+            ]
+          }
+        ],
+        "selected": false
+      }
+    ]
+  },
+  "primary_n": 34,
+  "primary_gamma": -0.55,
+  "binary_iterations_not_reported_function": [
+    {
+      "iteration": 1,
+      "fail_fraction": 0.29325259515570934,
+      "n_components": 8,
+      "largest": 301
+    },
+    {
+      "iteration": 2,
+      "fail_fraction": 0.36505190311418684,
+      "n_components": 6,
+      "largest": 357
+    },
+    {
+      "iteration": 3,
+      "fail_fraction": 0.421280276816609,
+      "n_components": 3,
+      "largest": 444
+    },
+    {
+      "iteration": 4,
+      "fail_fraction": 0.46280276816608995,
+      "n_components": 3,
+      "largest": 488
+    },
+    {
+      "iteration": 5,
+      "fail_fraction": 0.49480968858131485,
+      "n_components": 4,
+      "largest": 512
+    }
+  ],
+  "guards": {
+    "cyc": {
+      "observable": "T - b",
+      "threshold": 0.5,
+      "partner": "Q",
+      "summary": {
+        "n": 401,
+        "counts": {
+          "interior": 21,
+          "interface": 0,
+          "transient": 307,
+          "margin": 73
+        },
+        "fractions": {
+          "interior": 0.05236907730673317,
+          "interface": 0.0,
+          "transient": 0.7655860349127181,
+          "margin": 0.18204488778054864
+        },
+        "interior_by_kind": {
+          "orbit": 21
+        },
+        "interior_by_component_id": {
+          "2": 21
+        },
+        "dist_to_orbit_median": 0.1413302190127926,
+        "dist_to_orbit_min": 0.08191367058608404,
+        "interior_dist_to_orbit_min": 0.08191367058608404,
+        "interior_dist_to_orbit_median": 0.0831630155538735,
+        "interior_dist_to_orbit_max": 0.08674068708789522
+      },
+      "orbit_crossings": [],
+      "filippov": {
+        "partner_mode": "Q",
+        "normal": [
+          1.0,
+          0.0
+        ],
+        "n": 401,
+        "fraction_opposite": 0.3740648379052369,
+        "fraction_same_sign": 0.6259351620947631,
+        "fraction_either_normal_near_zero": 0.0,
+        "normal_P_median_abs": 0.0839625,
+        "normal_partner_median_abs": 0.2925,
+        "sliding_speed_median_abs": 0.016345641515624995,
+        "sliding_speed_max_abs": 0.06230886740624998,
+        "fraction_sliding_speed_below_1e-3": 0.04
+      }
+    },
+    "imm": {
+      "observable": "E - E*",
+      "threshold": 0.5617283950617284,
+      "partner": "I",
+      "summary": {
+        "n": 401,
+        "counts": {
+          "interior": 270,
+          "interface": 7,
+          "transient": 15,
+          "margin": 109
+        },
+        "fractions": {
+          "interior": 0.6733167082294265,
+          "interface": 0.017456359102244388,
+          "transient": 0.03740648379052369,
+          "margin": 0.2718204488778055
+        },
+        "interior_by_kind": {
+          "orbit": 212,
+          "focus": 58
+        },
+        "interior_by_component_id": {
+          "2": 207,
+          "4": 58,
+          "5": 5
+        },
+        "dist_to_orbit_median": 0.06771790925958163,
+        "dist_to_orbit_min": 0.00043045512832073137,
+        "interior_dist_to_orbit_min": 0.00043045512832073137,
+        "interior_dist_to_orbit_median": 0.045750348703870736,
+        "interior_dist_to_orbit_max": 0.1465419604827118
+      },
+      "orbit_crossings": [
+        {
+          "T": 0.41491515991351036,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.007355053350593986,
+          "dist_second": 0.13194716429763587
+        },
+        {
+          "T": 0.1003678935001001,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.008080452619306466,
+          "dist_second": 0.09656628991447358
+        }
+      ],
+      "filippov": {
+        "partner_mode": "I",
+        "normal": [
+          0.0,
+          1.0
+        ],
+        "n": 401,
+        "fraction_opposite": 0.0,
+        "fraction_same_sign": 1.0,
+        "fraction_either_normal_near_zero": 0.0,
+        "normal_P_median_abs": 0.04662645083240957,
+        "normal_partner_median_abs": 0.04662645083240957,
+        "sliding_speed_median_abs": null,
+        "sliding_speed_max_abs": null,
+        "fraction_sliding_speed_below_1e-3": null
+      }
+    },
+    "ang": {
+      "observable": "T - T*",
+      "threshold": 0.22222222222222224,
+      "partner": "A",
+      "summary": {
+        "n": 401,
+        "counts": {
+          "interior": 105,
+          "interface": 0,
+          "transient": 201,
+          "margin": 95
+        },
+        "fractions": {
+          "interior": 0.26184538653366585,
+          "interface": 0.0,
+          "transient": 0.5012468827930174,
+          "margin": 0.23690773067331672
+        },
+        "interior_by_kind": {
+          "orbit": 70,
+          "focus": 35
+        },
+        "interior_by_component_id": {
+          "2": 70,
+          "4": 35
+        },
+        "dist_to_orbit_median": 0.08431682966495822,
+        "dist_to_orbit_min": 0.000738715938215625,
+        "interior_dist_to_orbit_min": 0.000738715938215625,
+        "interior_dist_to_orbit_median": 0.022345780417166672,
+        "interior_dist_to_orbit_max": 0.12263229501678356
+      },
+      "orbit_crossings": [
+        {
+          "T": 0.22222222222222224,
+          "E": 0.39646360322519314,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.008907872229686848,
+          "dist_second": 0.1582730727066412
+        },
+        {
+          "T": 0.22222222222222227,
+          "E": 0.7280827047149183,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.012039532456600234,
+          "dist_second": 0.15343148296629
+        }
+      ],
+      "filippov": {
+        "partner_mode": "A",
+        "normal": [
+          1.0,
+          0.0
+        ],
+        "n": 401,
+        "fraction_opposite": 0.0,
+        "fraction_same_sign": 0.0,
+        "fraction_either_normal_near_zero": 1.0,
+        "normal_P_median_abs": 0.05159335232668566,
+        "normal_partner_median_abs": 0.0,
+        "sliding_speed_median_abs": null,
+        "sliding_speed_max_abs": null,
+        "fraction_sliding_speed_below_1e-3": null
+      }
+    }
+  },
+  "geometric_orbit_hits_off_focus": [
+    {
+      "guard": "imm",
+      "T": 0.41491515991351036,
+      "E": 0.5617283950617284,
+      "dist_focus": 0.19269293769128812
+    },
+    {
+      "guard": "imm",
+      "T": 0.1003678935001001,
+      "E": 0.5617283950617284,
+      "dist_focus": 0.12185432872212214
+    },
+    {
+      "guard": "ang",
+      "T": 0.22222222222222224,
+      "E": 0.39646360322519314,
+      "dist_focus": 0.1652647918365353
+    },
+    {
+      "guard": "ang",
+      "T": 0.22222222222222227,
+      "E": 0.7280827047149183,
+      "dist_focus": 0.16635430965318987
+    }
+  ],
+  "crossing_classes_by_grid": {
+    "22": {
+      "cyc": [],
+      "imm": [
+        {
+          "T": 0.41491515991351036,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 1,
+          "component_kind": "orbit",
+          "dist_nearest": 0.01080028392370242,
+          "dist_second": 0.17448254468727184
+        },
+        {
+          "T": 0.1003678935001001,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 1,
+          "component_kind": "orbit",
+          "dist_nearest": 0.010994045089144948,
+          "dist_second": 0.3583655129790135
+        }
+      ],
+      "ang": [
+        {
+          "T": 0.22222222222222224,
+          "E": 0.39646360322519314,
+          "class": "interior",
+          "component_id": 1,
+          "component_kind": "orbit",
+          "dist_nearest": 0.015798143379569373,
+          "dist_second": 0.35801607123167994
+        },
+        {
+          "T": 0.22222222222222227,
+          "E": 0.7280827047149183,
+          "class": "interior",
+          "component_id": 1,
+          "component_kind": "orbit",
+          "dist_nearest": 0.008902314119763225,
+          "dist_second": 0.20146027320236812
+        }
+      ]
+    },
+    "34": {
+      "cyc": [],
+      "imm": [
+        {
+          "T": 0.41491515991351036,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.007355053350593986,
+          "dist_second": 0.13194716429763587
+        },
+        {
+          "T": 0.1003678935001001,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.008080452619306466,
+          "dist_second": 0.09656628991447358
+        }
+      ],
+      "ang": [
+        {
+          "T": 0.22222222222222224,
+          "E": 0.39646360322519314,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.008907872229686848,
+          "dist_second": 0.1582730727066412
+        },
+        {
+          "T": 0.22222222222222227,
+          "E": 0.7280827047149183,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.012039532456600234,
+          "dist_second": 0.15343148296629
+        }
+      ]
+    },
+    "42": {
+      "cyc": [],
+      "imm": [
+        {
+          "T": 0.41491515991351036,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.004292416325574192,
+          "dist_second": 0.10293156883796967
+        },
+        {
+          "T": 0.1003678935001001,
+          "E": 0.5617283950617284,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.003520548554473875,
+          "dist_second": 0.1174435370886403
+        }
+      ],
+      "ang": [
+        {
+          "T": 0.22222222222222224,
+          "E": 0.39646360322519314,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.0044592041993653945,
+          "dist_second": 0.1477487871459042
+        },
+        {
+          "T": 0.22222222222222227,
+          "E": 0.7280827047149183,
+          "class": "interior",
+          "component_id": 2,
+          "component_kind": "orbit",
+          "dist_nearest": 0.006081739125451421,
+          "dist_second": 0.15131792676045303
+        }
+      ]
+    }
+  },
+  "return_diagnostic": {
+    "dt": 0.05,
+    "steps": 796,
+    "excursion_floor": 0.12,
+    "return_radius": 0.06,
+    "return_window": [
+      0.85,
+      1.15
+    ],
+    "fail_return_fraction": 0.8908554572271387,
+    "pass_return_fraction": 0.46266829865361075,
+    "fail_left_fraction": 0.038348082595870206,
+    "pass_left_fraction": 0.3011015911872705,
+    "note": "A finite-time return is not an epsilon-chain. Leaving the window is not chain recurrence."
+  },
+  "transient": {
+    "start": [
+      0.55,
+      0.8
+    ],
+    "V_start": 1.0146591351499907,
+    "V_after_one_period": 0.16018698073543947,
+    "drop_one_period": 0.8544721544145513,
+    "V_end": -1.0945580654359022,
+    "drop_total": 2.109217200585893
+  },
+  "hybrid_switches": [
+    {
+      "label": "orbit_sample",
+      "start": [
+        0.4096480670350019,
+        0.4929418423380986
+      ],
+      "start_mode": "P",
+      "hit": "imm",
+      "hit_time": 1.3725336853202266,
+      "hit_state": [
+        0.4149152398329955,
+        0.5617283950617284
+      ],
+      "partner_mode": "I",
+      "state_after_12": [
+        0.0005386316101681502,
+        0.08351522243919614
+      ],
+      "distance_from_hit_after_12": 0.6327683714535378,
+      "min_T_after_switch": 0.0005386316101681502,
+      "occult_within_12": true,
+      "time_to_detection_floor": 1.35,
+      "hit_class": "interior",
+      "hit_component_kind": "orbit",
+      "hit_dist_nearest": 0.007355070539022905,
+      "hit_dist_second": 0.13194708449665923
+    },
+    {
+      "label": "outside_corner",
+      "start": [
+        0.55,
+        0.8
+      ],
+      "start_mode": "P",
+      "hit": "cyc",
+      "hit_time": 0.2963516677938437,
+      "hit_state": [
+        0.5,
+        0.8321176094874589
+      ],
+      "partner_mode": "Q",
+      "state_after_12": [
+        0.0007025257486899607,
+        0.07548802213722335
+      ],
+      "distance_from_hit_after_12": 0.9065242965566479,
+      "min_T_after_switch": 0.0007025257486899607,
+      "occult_within_12": true,
+      "time_to_detection_floor": 1.3,
+      "hit_class": "transient",
+      "hit_component_kind": null,
+      "hit_dist_nearest": 0.08027759645467793,
+      "hit_dist_second": 0.17870875617880602
+    },
+    {
+      "label": "near_focus",
+      "start": [
+        0.27222222222222225,
+        0.6017283950617285
+      ],
+      "start_mode": "P",
+      "hit": "ang",
+      "hit_time": 2.6857211787231994,
+      "hit_state": [
+        0.22222222222222224,
+        0.6276594715254254
+      ],
+      "partner_mode": "A",
+      "state_after_12": [
+        0.22222222222222224,
+        0.056940008475241576
+      ],
+      "distance_from_hit_after_12": 0.5707194630501838,
+      "min_T_after_switch": 0.22222222222222224,
+      "occult_within_12": false,
+      "time_to_detection_floor": null,
+      "hit_class": "transient",
+      "hit_component_kind": null,
+      "hit_dist_nearest": 0.0533806532458388,
+      "hit_dist_second": 0.0644578290199906
+    }
+  ],
+  "component_counts_primary": {
+    "n_connected": 8,
+    "n_focus": 1,
+    "n_orbit": 7,
+    "focus_sizes": [
+      7
+    ],
+    "orbit_sizes": [
+      301,
+      13,
+      9,
+      6,
+      1,
+      1,
+      1
+    ]
+  },
+  "verdict": "counterexample",
+  "honesty": {
+    "collocation_defect_is_not_a_certified_conley_set": true,
+    "reason": "The rebuilt orbital derivative along the periodic orbit is not identically non-positive, no epsilon-chain is enumerated, and no interval enclosure is computed.",
+    "primary_orbit_fraction_positive_orbital_derivative": 0.4759036144578313
+  }
+}

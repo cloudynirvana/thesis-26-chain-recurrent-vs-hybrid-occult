@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you cite this computational research thesis, please use the metadata below. No DOI is minted here; do not invent one."
+type: thesis
+title: "Hybrid occult mode switches versus chain-recurrent components on a joint hybrid–smooth field"
+authors:
+  - family-names: Ogbonna
+    given-names: Kelechi Emeka
+    email: kelechiogbonna300@gmail.com
+    alias: cloudynirvana
+abstract: >-
+  On a joint hybrid–smooth toy, do hybrid occult mode-switch observables
+  align with chain-recurrent components from a complete Lyapunov construction,
+  or can switches fall inside a single recurrent region? A planar
+  tumour–effector field has an unstable focus and a periodic orbit of period
+  19.876. Immune and angiogenic guards meet that orbit at four points, each
+  separated from the focus, and each of those points falls in the interior of
+  one collocation-defect component on three grids. A cycling guard misses the
+  orbit and is crossed in the transient complement. The rebuilt orbital
+  derivative is positive on 47.6 percent of the orbit, so the defect is not a
+  certified Conley set. Not a medical device. No cure.
+keywords:
+  - hybrid systems
+  - occult residual disease
+  - chain recurrence
+  - complete Lyapunov function
+  - collocation
+  - Filippov
+  - toy model
+  - research-only
+license: MIT
+date-released: "2026-09-21"
+url: "https://github.com/cloudynirvana/thesis-26-chain-recurrent-vs-hybrid-occult"
+repository-code: "https://github.com/cloudynirvana/thesis-26-chain-recurrent-vs-hybrid-occult"
+preferred-citation:
+  type: thesis
+  title: "Hybrid occult mode switches versus chain-recurrent components on a joint hybrid–smooth field"
+  authors:
+    - family-names: Ogbonna
+      given-names: Kelechi Emeka
+      year: 2026
+      month: 9
+  url: "https://github.com/cloudynirvana/thesis-26-chain-recurrent-vs-hybrid-occult"
+  notes: "Thesis #26. Depends on T04 and T17. Computational research. Collocation defect, not a certified Conley set. No document DOI."
